@@ -1,11 +1,16 @@
+h1{
+    font-size: 3em;
+    margin: 20px;
+}
 div{
     font-size: 2em;
-    padding: 20px;
+    padding: 25px;
     margin: 20px;
-    width: 3em;
+    width: 3.25em;
 }
-.boks-a {
+.boks-a{
     position: sticky;
     background-color: silver;
     border: 2px solid black;
+    box-shadow: 5px 10px dimgray;
 }
