@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            height: 100%;
+        }
+        .prlx-a {
+            background-image: url('jordbilde.webp');
+            height: 100vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .other {
+            display: grid;
+            grid-template-rows: 1fr;
+            justify-content: center;
+            align-items: center;
+            font-size: xx-large;
+            color: beige;
+            border: 100vw 1px black;
+            background: darkred;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="prlx-a"></div>
+    <div class="other">Tekst A</div>
+    <div class="prlx-b"></div>
+    <div class="other">Tekst B</div>
+    <div class="prlx-c"></div>
+</body>
+</html>
