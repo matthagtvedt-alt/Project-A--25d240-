@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="f-navn" id="f-navn" placeholder="Fornavn">
+    <input type="text" name="m-navn" id="m-navn" placeholder="Mellomnavn">
+    <input type="text" name="e-navn" id="e-navn" placeholder="Etternavn">
+    <button onclick="visUtskrift()">Vis hele navnet</button>
+    <div id="utskrift"></div>
+    <script>
+        function visUtskrift(){
+            let fnavn = document.getElementById("f-navn").value;
+            let mnavn = document.getElementById("m-navn").value;
+            let enavn = document.getElementById("e-navn").value;
+            document.getElementById("utskrift").innerHTML = (fnavn + " " + mnavn + " " + enavn);
+        }
+    </script>
+</body>
+</html>
