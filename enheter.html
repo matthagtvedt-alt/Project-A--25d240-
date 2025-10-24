@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    
+        h1 {
+            text-align: center;
+        }
+
+        .temp {
+            
+            display: flex;
+            p {
+               margin: 5px;  
+            }
+
+            input {
+                margin: 5px;
+            }
+        }
+        i {
+            margin-left: 2em;
+        }
+    </style>
 </head>
 <body>
     <h1>Enhetsberegning</h1>
+    <br>
     <h2>Temperatur</h2>
-    <p>Celcius</p>
-    <input type="text" id="cel">
-    <p>Farenheit</p>
-    <input type="text" id="far">
-    <p>Kelvin</p>
-    <input type="text" id="kel">
+    <div class="temp">
+        <p>Celcius</p>
+        <input type="number" id="cel">
+        <p>Farenheit</p>
+        <input type="number" id="far">
+        <p>Kelvin</p>
+        <input type="number" id="kel">
+    </div>
+    <br>
+    <button>Vis Temperatur</button>
+    <i></i>
     <script>
        
     </script>
