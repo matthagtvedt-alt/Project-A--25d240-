@@ -39,10 +39,14 @@
         <input type="number" id="kel">
     </div>
     <br>
-    <button>Vis Temperatur</button>
-    <i></i>
+    <button onclick()="visTemp">Vis Temperatur</button>
+    <p id="fasit"></p>
     <script>
-       
+        //Funker ikke nå for tiden vet ikke hvorfor :(
+        function visTemp() {
+            let cel = document.getElementById("cel").value
+            document.getElementById("fasit").innerHTML = (cel)
+        }
     </script>
 </body>
 </html>
