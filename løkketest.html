@@ -8,12 +8,28 @@
 <body>
     <h1>Løkker</h1>
 
-    <button>Knapp</button>
+    <button onclick="lagTall()">Knapp</button>
+    <div id="rekke"></div>
     <script>
-        for (let i = 0; i <= 100; i++) {
-            if (i % 2 == 0)
-            console.log(i)
+        function lagTall(){
+            let i;
+            let innhold = "";
+
+            for (i = 0; i <= 256; i++) {
+                if (i % 16 == 0)
+                innhold += i + "<br>"
+            }
+            let x;
+            let innholdB = ""
+
+            for (x = 0; 1 <= 16; x++) {
+                innholdB += x + " Ganger 16 = "
+            }
+
+            
+            document.getElementById("rekke").innerHTML = innholdB + innhold;
         }
+        //"Invalid string length" melding i console for Linje 26 Kollone 33
     </script>
 </body>
 </html>
