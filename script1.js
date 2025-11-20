@@ -20,3 +20,11 @@ else{
     console.log("Du er IKKE ansatt")
 }
 
+// Anonym funksjon
+
+let testAvAnon = function(fnavn,enavn){
+    console.log(`${fnavn} ${enavn}`)
+}
+
+testAvAnon("Matteus","Hagtvedt")
+
