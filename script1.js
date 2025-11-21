@@ -28,3 +28,12 @@ let testAvAnon = function(fnavn,enavn){
 
 testAvAnon("Matteus","Hagtvedt")
 
+// Lambda funksjon
+
+let mittArray = [21,67,420];
+
+mittArray.filter((tall) => {console.log(tall % 2 == 0) })
+
+let total = mittArray.reduce((sum, el) => { return (sum + el)}, 0);
+console.log (total)
+
