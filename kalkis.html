@@ -72,35 +72,47 @@
 </head>
 <body>
     <div class="kalkulator">
-        <input type="text" class="kalk-skjerm" id="display">
+        <input type="text" class="kalk-skjerm" id="display" readonly>
         <div class="kalk-knapper">
-            <button class="knapp-funksjon">C</button>
-            <button class="knapp-funksjon">←</button>
-            <button class="knapp-funksjon">%</button>
-            <button class="knapp-operator">÷</button>
+            <button class="knapp-funksjon" onclick="clearDisplay()">C</button>
+            <button class="knapp-funksjon" onclick="addToDisplay('(')">(</button>
+            <button class="knapp-funksjon" onclick="addToDisplay(')')">)</button>
+            <button class="knapp-operator" onclick="addToDisplay('/')">÷</button>
 
-            <button class="knapp-tall">7</button>
-            <button class="knapp-tall">8</button>
-            <button class="knapp-tall">9</button>
-            <button class="knapp-operator">×</button>
+            <button class="knapp-tall" onclick="addToDisplay('7')">7</button>
+            <button class="knapp-tall" onclick="addToDisplay('8')">8</button>
+            <button class="knapp-tall" onclick="addToDisplay('9')">9</button>
+            <button class="knapp-operator" onclick="addToDisplay('*')">×</button>
 
-            <button class="knapp-tall">4</button>
-            <button class="knapp-tall">5</button>
-            <button class="knapp-tall">6</button>
-            <button class="knapp-operator">-</button>
+            <button class="knapp-tall" onclick="addToDisplay('4')">4</button>
+            <button class="knapp-tall" onclick="addToDisplay('5')">5</button>
+            <button class="knapp-tall" onclick="addToDisplay('6')">6</button>
+            <button class="knapp-operator" onclick="addToDisplay('-')">-</button>
 
-            <button class="knapp-tall">1</button>
-            <button class="knapp-tall">2</button>
-            <button class="knapp-tall">3</button>
-            <button class="knapp-operator">+</button>
+            <button class="knapp-tall" onclick="addToDisplay('1')">1</button>
+            <button class="knapp-tall" onclick="addToDisplay('2')">2</button>
+            <button class="knapp-tall" onclick="addToDisplay('3')">3</button>
+            <button class="knapp-operator" onclick="addToDisplay('+')">+</button>
 
-            <button class="knapp-tall null">0</button>
-            <button class="desimal">.</button>
-            <button class="knapp-likhet">=</button>
+            <button class="knapp-tall null" onclick="addToDisplay('0')">0</button>
+            <button class="desimal" onclick="addToDisplay('.')">,</button>
+            <button class="knapp-likhet" onclick="equals()">=</button>
         </div>
     </div>
     <script>
-        
+        let display = document.getElementById("display")
+
+        function addToDisplay(input) {
+            display.value += input;
+        }
+
+        function equals() {
+            display.value = eval(display.value)
+        }
+
+        function clearDisplay() {
+            display.value = ""
+        }
     </script>
 </body>
 </html>
