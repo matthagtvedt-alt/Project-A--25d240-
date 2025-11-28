@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Data lagring</h1>
+
+    <h3>Med local.storage</h3>
+
+    <input type="text" id="fornavn">
+    <input type="text" id="etternavn"> <br><br>
+    <button onclick="saveName()">Lagre navn</button>
+    <button onclick="getName()">Skriv ut navn</button> <br><br>
+    <div id="print"></div> <br>
+
+    <h3>Med text fil</h3>
+
+    <button onclick="readTXT()">Hent tekstfil</button>
+    <div id="print-2"></div>
+
+    <script>
+        // Test av "local.storage"
+
+        let utskrift = document.getElementById("print");
+
+        function saveName() {
+            let fnavn = document.getElementById("fornavn").value;
+            let enavn = document.getElementById("etternavn").value;
+            
+            console.log(fnavn,enavn)
+
+            localStorage.setItem("fornavn",fnavn);
+            localStorage.setItem("etternavn",enavn);
+        }
+
+        function getName() {
+            let fnavn = localStorage.getItem("fornavn");
+            let enavn = localStorage.getItem("etternavn");
+
+            if (fnavn === null) {
+                fnavn = "Vennligst registrer";
+            }
+
+            if (enavn === null) {
+                enavn = ":3";
+            }
+
+            utskrift.innerHTML = `${fnavn} ${enavn}`
+        }
+
+        // Test av Tesktfiler og async/await
+
+        let utskrift2 = document.getElementById("print-2");
+
+        async function readTXT() {
+
+            const res = await fetch('dingseboms.txt');
+
+            const data = await res.text();
+
+            console.log(data);
+            utskrift2.innerHTML += `${data}`;
+        }
+    </script>
+
+</body>
+</html>
